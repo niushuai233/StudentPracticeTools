@@ -27,8 +27,6 @@ namespace niushuai233.Base
             this.Resize += new EventHandler(this.BaseForm_Resize);
 
             this.FormClosed += new FormClosedEventHandler(this.BaseForm_FormClosed);
-
-            AfterInit();
         }
 
         public BaseForm(UIForm2 form)
@@ -43,24 +41,26 @@ namespace niushuai233.Base
         protected void Init(string title)
         {
             SetTitle(title);
+
+            AfterInit();
         }
         
 
         protected void Init(UIForm2 form)
         {
-            superForm = form;
-            // 显示子窗体
-            this.Show();
-            // 隐藏父窗体
-            superForm.Hide();
+            DealParentSonForm(form);
 
+            AfterInit();
         }
 
 
         protected void Init(string title, UIForm2 form)
         {
-            Init(title);
-            Init(form);
+            SetTitle(title);
+
+            DealParentSonForm(form);
+
+            AfterInit();
         }
 
         /// <summary>
@@ -71,6 +71,16 @@ namespace niushuai233.Base
         {
             this.Text = title;
         }
+
+        private void DealParentSonForm(UIForm2 form)
+        {
+            superForm = form;
+            // 显示子窗体
+            this.Show();
+            // 隐藏父窗体
+            superForm.Hide();
+        }
+
 
         protected void BaseForm_Load(object sender, EventArgs e)
         {

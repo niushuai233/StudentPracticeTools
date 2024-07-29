@@ -33,10 +33,13 @@ namespace StudentPracticeTools.Forms
             this.uiSymbolLabel2 = new Sunny.UI.UISymbolLabel();
             this.uiSymbolLabel3 = new Sunny.UI.UISymbolLabel();
             this.uiSymbolLabel4 = new Sunny.UI.UISymbolLabel();
-            this.uiTextBox1 = new Sunny.UI.UITextBox();
-            this.uiTextBox2 = new Sunny.UI.UITextBox();
-            this.uiTextBox4 = new Sunny.UI.UITextBox();
-            this.uiListBox1 = new Sunny.UI.UIListBox();
+            this.numericUpDown_font_size = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_total_count = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_column_count = new System.Windows.Forms.NumericUpDown();
+            this.uiTextBox_font_name = new Sunny.UI.UITextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_font_size)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_total_count)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_column_count)).BeginInit();
             this.SuspendLayout();
             // 
             // uiSymbolLabel1
@@ -53,7 +56,7 @@ namespace StudentPracticeTools.Forms
             // uiSymbolLabel2
             // 
             this.uiSymbolLabel2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolLabel2.Location = new System.Drawing.Point(184, 38);
+            this.uiSymbolLabel2.Location = new System.Drawing.Point(179, 38);
             this.uiSymbolLabel2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel2.Name = "uiSymbolLabel2";
             this.uiSymbolLabel2.Size = new System.Drawing.Size(105, 35);
@@ -64,10 +67,10 @@ namespace StudentPracticeTools.Forms
             // uiSymbolLabel3
             // 
             this.uiSymbolLabel3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolLabel3.Location = new System.Drawing.Point(365, 38);
+            this.uiSymbolLabel3.Location = new System.Drawing.Point(341, 38);
             this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel3.Name = "uiSymbolLabel3";
-            this.uiSymbolLabel3.Size = new System.Drawing.Size(105, 35);
+            this.uiSymbolLabel3.Size = new System.Drawing.Size(64, 35);
             this.uiSymbolLabel3.Symbol = 560103;
             this.uiSymbolLabel3.TabIndex = 2;
             this.uiSymbolLabel3.Text = "字体";
@@ -75,7 +78,7 @@ namespace StudentPracticeTools.Forms
             // uiSymbolLabel4
             // 
             this.uiSymbolLabel4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiSymbolLabel4.Location = new System.Drawing.Point(595, 38);
+            this.uiSymbolLabel4.Location = new System.Drawing.Point(606, 38);
             this.uiSymbolLabel4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel4.Name = "uiSymbolLabel4";
             this.uiSymbolLabel4.Size = new System.Drawing.Size(105, 35);
@@ -83,83 +86,95 @@ namespace StudentPracticeTools.Forms
             this.uiSymbolLabel4.TabIndex = 3;
             this.uiSymbolLabel4.Text = "字体大小";
             // 
-            // uiTextBox1
+            // numericUpDown_font_size
             // 
-            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox1.Location = new System.Drawing.Point(102, 41);
-            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox1.Name = "uiTextBox1";
-            this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(83, 29);
-            this.uiTextBox1.TabIndex = 4;
-            this.uiTextBox1.Text = "uiTextBox1";
-            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox1.Watermark = "";
+            this.numericUpDown_font_size.Location = new System.Drawing.Point(715, 42);
+            this.numericUpDown_font_size.Maximum = new decimal(new int[] {
+            32,
+            0,
+            0,
+            0});
+            this.numericUpDown_font_size.Name = "numericUpDown_font_size";
+            this.numericUpDown_font_size.Size = new System.Drawing.Size(73, 26);
+            this.numericUpDown_font_size.TabIndex = 8;
+            this.numericUpDown_font_size.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.numericUpDown_font_size.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericUpDown_no_dot_KeyPress);
             // 
-            // uiTextBox2
+            // numericUpDown_total_count
             // 
-            this.uiTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox2.Location = new System.Drawing.Point(294, 41);
-            this.uiTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox2.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox2.Name = "uiTextBox2";
-            this.uiTextBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox2.ShowText = false;
-            this.uiTextBox2.Size = new System.Drawing.Size(84, 29);
-            this.uiTextBox2.TabIndex = 5;
-            this.uiTextBox2.Text = "uiTextBox2";
-            this.uiTextBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox2.Watermark = "";
+            this.numericUpDown_total_count.Location = new System.Drawing.Point(112, 42);
+            this.numericUpDown_total_count.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numericUpDown_total_count.Name = "numericUpDown_total_count";
+            this.numericUpDown_total_count.Size = new System.Drawing.Size(63, 26);
+            this.numericUpDown_total_count.TabIndex = 9;
+            this.numericUpDown_total_count.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown_total_count.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericUpDown_no_dot_KeyPress);
             // 
-            // uiTextBox4
+            // numericUpDown_column_count
             // 
-            this.uiTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox4.Location = new System.Drawing.Point(696, 41);
-            this.uiTextBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox4.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox4.Name = "uiTextBox4";
-            this.uiTextBox4.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox4.ShowText = false;
-            this.uiTextBox4.Size = new System.Drawing.Size(100, 29);
-            this.uiTextBox4.TabIndex = 5;
-            this.uiTextBox4.Text = "uiTextBox4";
-            this.uiTextBox4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox4.Watermark = "";
+            this.numericUpDown_column_count.Location = new System.Drawing.Point(288, 42);
+            this.numericUpDown_column_count.Maximum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.numericUpDown_column_count.Name = "numericUpDown_column_count";
+            this.numericUpDown_column_count.Size = new System.Drawing.Size(49, 26);
+            this.numericUpDown_column_count.TabIndex = 10;
+            this.numericUpDown_column_count.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.numericUpDown_column_count.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericUpDown_no_dot_KeyPress);
             // 
-            // uiListBox1
+            // uiTextBox_font_name
             // 
-            this.uiListBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiListBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.uiListBox1.ItemSelectForeColor = System.Drawing.Color.White;
-            this.uiListBox1.Location = new System.Drawing.Point(447, 40);
-            this.uiListBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiListBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiListBox1.Name = "uiListBox1";
-            this.uiListBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.uiListBox1.ShowText = false;
-            this.uiListBox1.Size = new System.Drawing.Size(143, 31);
-            this.uiListBox1.TabIndex = 7;
-            this.uiListBox1.Text = "uiListBox1";
+            this.uiTextBox_font_name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.uiTextBox_font_name.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiTextBox_font_name.Location = new System.Drawing.Point(409, 41);
+            this.uiTextBox_font_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiTextBox_font_name.MinimumSize = new System.Drawing.Size(1, 16);
+            this.uiTextBox_font_name.Name = "uiTextBox_font_name";
+            this.uiTextBox_font_name.Padding = new System.Windows.Forms.Padding(5);
+            this.uiTextBox_font_name.ReadOnly = true;
+            this.uiTextBox_font_name.ShowText = false;
+            this.uiTextBox_font_name.Size = new System.Drawing.Size(193, 29);
+            this.uiTextBox_font_name.TabIndex = 11;
+            this.uiTextBox_font_name.Text = "微软雅黑";
+            this.uiTextBox_font_name.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiTextBox_font_name.Watermark = "";
+            this.uiTextBox_font_name.Click += new System.EventHandler(this.uiTextBox_font_name_Click);
             // 
             // ArithmeticForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.uiListBox1);
-            this.Controls.Add(this.uiTextBox4);
-            this.Controls.Add(this.uiTextBox2);
-            this.Controls.Add(this.uiTextBox1);
+            this.Controls.Add(this.uiTextBox_font_name);
+            this.Controls.Add(this.numericUpDown_column_count);
+            this.Controls.Add(this.numericUpDown_total_count);
+            this.Controls.Add(this.numericUpDown_font_size);
             this.Controls.Add(this.uiSymbolLabel4);
             this.Controls.Add(this.uiSymbolLabel3);
             this.Controls.Add(this.uiSymbolLabel2);
             this.Controls.Add(this.uiSymbolLabel1);
             this.Name = "ArithmeticForm";
             this.Text = "Arithmetic";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_font_size)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_total_count)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_column_count)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,9 +185,9 @@ namespace StudentPracticeTools.Forms
         private Sunny.UI.UISymbolLabel uiSymbolLabel2;
         private Sunny.UI.UISymbolLabel uiSymbolLabel3;
         private Sunny.UI.UISymbolLabel uiSymbolLabel4;
-        private Sunny.UI.UITextBox uiTextBox1;
-        private Sunny.UI.UITextBox uiTextBox2;
-        private Sunny.UI.UITextBox uiTextBox4;
-        private Sunny.UI.UIListBox uiListBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown_font_size;
+        private System.Windows.Forms.NumericUpDown numericUpDown_total_count;
+        private System.Windows.Forms.NumericUpDown numericUpDown_column_count;
+        private Sunny.UI.UITextBox uiTextBox_font_name;
     }
 }

@@ -62,6 +62,7 @@
     <Compile Include="Base\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\ArithmeticConfig.cs" />
     <Compile Include="Forms\ArithmeticForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -43,7 +43,7 @@ namespace StudentPracticeTools
             this.uiButton_arithmetic.TabIndex = 0;
             this.uiButton_arithmetic.Text = "算术题";
             this.uiButton_arithmetic.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton_arithmetic.Click += new System.EventHandler(this.uiButton_kou_suan_Click);
+            this.uiButton_arithmetic.Click += new System.EventHandler(this.uiButton_arithmetic_Click);
             // 
             // MainApplication
             // 

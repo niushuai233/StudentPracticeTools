@@ -25,11 +25,11 @@ namespace StudentPracticeTools
         }
 
         /// <summary>
-        /// 跳转到口算界面
+        /// 跳转到算术题界面
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void uiButton_kou_suan_Click(object sender, EventArgs e)
+        private void uiButton_arithmetic_Click(object sender, EventArgs e)
         {
             ArithmeticForm arithmeticForm = new ArithmeticForm(this);
         }
